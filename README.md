@@ -284,7 +284,7 @@ Especialista em Automação de Processos, Infraestrutura, Suporte Técnico e Adm
 
 GitHub: https://github.com/Richard-Deivis
 
-LinkedIn: https://www.linkedin.com/in/richard-deivis/
+LinkedIn: https://www.linkedin.com/in/richarddeivis/
 
 ---
 
