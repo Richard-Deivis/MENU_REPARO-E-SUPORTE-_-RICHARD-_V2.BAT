@@ -294,9 +294,9 @@ Especialista em Automação de Processos, Infraestrutura, Suporte Técnico e Adm
 
 #### Contato
 
-GitHub: https://github.com/SEU-USUARIO
+GitHub: https://github.com/Richard-Deivis
 
-LinkedIn: https://linkedin.com/in/SEU-PERFIL
+LinkedIn: https://www.linkedin.com/in/richard-deivis/
 
 ---
 
