@@ -258,18 +258,6 @@ Todas as ações são executadas localmente na estação ou servidor.
 
 ---
 
-## 📸 Capturas de Tela
-
-Adicione aqui imagens do menu principal.
-
-Exemplo:
-
-```markdown
-![Menu Principal](images/menu-principal.png)
-```
-
----
-
 ## 🤝 Contribuição
 
 Sugestões, melhorias e correções são sempre bem-vindas.
