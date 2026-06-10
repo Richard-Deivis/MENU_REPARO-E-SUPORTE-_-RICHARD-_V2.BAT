@@ -1,106 +1,305 @@
-# Menu de Reparo e Suporte Técnico - Richard V2
+# 🛠️ Menu de Reparo e Suporte Técnico
 
-## Descrição
+Ferramenta desenvolvida em Batch Script para centralizar procedimentos de diagnóstico, manutenção preventiva e suporte técnico em ambientes Windows.
 
-O **Menu de Reparo e Suporte Técnico - Richard V2** é um script Batch desenvolvido para centralizar ferramentas administrativas, diagnósticos e procedimentos de manutenção do Windows em uma interface simples baseada em menu.
-
-Seu objetivo é agilizar atividades de suporte técnico, diagnóstico de problemas, manutenção preventiva e correção de falhas em estações de trabalho.
+O projeto foi criado para facilitar o trabalho de técnicos de suporte, analistas de infraestrutura e profissionais de TI, disponibilizando em um único menu as principais ferramentas nativas do Windows utilizadas no dia a dia.
 
 ---
 
-## Funcionalidades
+## 📋 Sobre o Projeto
 
-O sistema está dividido em quatro módulos principais:
+Durante atendimentos técnicos é comum executar diversos comandos para diagnóstico e correção de problemas.
 
-### 1. Comandos de Sistema
+Este script reúne essas funcionalidades em uma interface simples baseada em menu, permitindo acesso rápido a ferramentas de:
 
-Ferramentas para diagnóstico e reparo do sistema operacional.
+- Diagnóstico do sistema operacional
+- Diagnóstico de rede
+- Manutenção preventiva
+- Correção de problemas de impressão
+- Atualização de aplicativos
+
+O objetivo é reduzir o tempo de atendimento e padronizar procedimentos técnicos.
+
+---
+
+## 🚀 Funcionalidades
+
+### 🖥️ Comandos de Sistema
+
+Ferramentas voltadas para análise e recuperação do sistema operacional.
 
 #### Recursos disponíveis
 
 - Verificação de integridade dos arquivos do Windows (SFC)
+- Reparação da imagem do Windows (DISM)
 - Diagnóstico de memória RAM
-- Listagem de drivers instalados
-- Abertura do Windows Update
 - Informações detalhadas do sistema
 - Gerenciamento de usuários locais
-- Reparação da imagem do Windows (DISM)
+- Acesso ao Windows Update
 - Visualizador de Eventos
 - Criação de ponto de restauração
 - Acesso ao Painel de Controle
 
----
+### 🌐 Comandos de Rede
 
-### 2. Comandos de Rede
-
-Ferramentas para análise e resolução de problemas de conectividade.
+Ferramentas para diagnóstico e correção de problemas de conectividade.
 
 #### Recursos disponíveis
 
-- Teste de conectividade (Ping)
-- Rastreamento de rota (Tracert)
-- Limpeza de cache DNS
-- Reinicialização dos componentes de rede
-- Teste básico de acesso à internet
-- Configuração detalhada de rede
-- Visualização de portas e conexões ativas
-- Diagnóstico DNS (Nslookup)
-- Consulta de tabela ARP
-- Estatísticas de rede (Netstat)
-- Diagnóstico NetBIOS (Nbtstat)
+- Ping
+- Tracert
+- Flush DNS
+- Reset Winsock
+- Reset TCP/IP
+- Consulta DNS (NSLookup)
+- Configuração de rede (IPCONFIG)
+- Visualização de conexões ativas (Netstat)
+- Consulta ARP
+- Diagnóstico NetBIOS
 
----
+### 🔧 Manutenção e Ferramentas
 
-### 3. Manutenção e Ferramentas
-
-Ferramentas de manutenção preventiva e corretiva.
+Rotinas de manutenção preventiva e corretiva.
 
 #### Recursos disponíveis
 
-- Verificação e correção de disco (CHKDSK)
+- Verificação de disco (CHKDSK)
 - Limpeza de arquivos temporários
 - Limpeza de cache DNS
 - Desfragmentação de disco
 - Atualização automática de aplicativos via Winget
 
----
+### 🖨️ Comandos de Impressão
 
-### 4. Comandos de Impressão
-
-Ferramentas para solução rápida de problemas de impressão.
+Ferramentas para correção rápida de falhas relacionadas à impressão.
 
 #### Recursos disponíveis
 
-- Parar serviço de spooler
-- Iniciar serviço de spooler
+- Parar serviço de impressão (Spooler)
+- Iniciar serviço de impressão (Spooler)
 
 ---
 
-## Requisitos
+## 📂 Estrutura do Menu
 
-### Sistema Operacional
+```text
+=========================================
+ MENU DE REPARO E SUPORTE TÉCNICO
+=========================================
+
+1 - Comandos de Sistema
+2 - Comandos de Rede
+3 - Manutenção e Ferramentas
+4 - Comandos de Impressão
+5 - Sair
+
+=========================================
+```
+
+---
+
+## 🔄 Fluxo Operacional
+
+```text
+Menu Principal
+│
+├── Sistema
+│   ├── SFC
+│   ├── DISM
+│   ├── Informações do Sistema
+│   ├── Gerenciamento de Usuários
+│   └── Eventos
+│
+├── Rede
+│   ├── Ping
+│   ├── Tracert
+│   ├── DNS
+│   ├── Netstat
+│   └── Reset de Rede
+│
+├── Manutenção
+│   ├── CHKDSK
+│   ├── Limpeza
+│   ├── Defrag
+│   └── Winget
+│
+└── Impressão
+    ├── Parar Spooler
+    └── Iniciar Spooler
+```
+
+---
+
+## ⚙️ Requisitos
+
+### Sistemas Operacionais Compatíveis
 
 - Windows 10
 - Windows 11
-- Windows Server 2016 ou superior
+- Windows Server 2016
+- Windows Server 2019
+- Windows Server 2022
 
 ### Permissões
 
-Alguns recursos exigem execução como Administrador:
+Para utilização completa recomenda-se executar o script como Administrador.
+
+Algumas funcionalidades exigem privilégios elevados:
 
 - SFC
 - DISM
 - CHKDSK
-- Reinicialização de rede
-- Criação de ponto de restauração
+- Reset de rede
 - Controle do serviço de impressão
-- Atualizações via Winget
+- Atualização via Winget
+- Criação de pontos de restauração
 
 ---
 
-## Como Executar
+## 🛠️ Tecnologias Utilizadas
 
-1. Localize o arquivo:
+- Windows Batch Script (.BAT)
+- SFC
+- DISM
+- CHKDSK
+- IPCONFIG
+- NETSH
+- NSLOOKUP
+- NETSTAT
+- DEFRAG
+- WINGET
+- Windows Event Viewer
 
-```text
-MENU - REPARO E SUPORTE - RICHARD V2.BAT
+---
+
+## 📚 Principais Comandos Utilizados
+
+| Função | Comando |
+|----------|----------|
+| Verificação do Sistema | sfc /scannow |
+| Reparação da Imagem do Windows | DISM /Online /Cleanup-Image /RestoreHealth |
+| Informações do Sistema | systeminfo |
+| Diagnóstico de Memória | mdsched |
+| Atualizações do Windows | Windows Update |
+| Limpeza DNS | ipconfig /flushdns |
+| Reset Winsock | netsh winsock reset |
+| Teste de Conectividade | ping |
+| Rastreamento de Rota | tracert |
+| Consulta DNS | nslookup |
+| Estatísticas de Rede | netstat |
+| Verificação de Disco | chkdsk |
+| Desfragmentação | defrag |
+| Atualização de Aplicativos | winget upgrade --all |
+| Serviço de Impressão | net stop spooler / net start spooler |
+
+---
+
+## 💡 Casos de Uso
+
+### Computador Lento
+
+1. SFC
+2. DISM
+3. Limpeza de Arquivos Temporários
+4. CHKDSK
+
+### Problemas de Internet
+
+1. Ping
+2. Flush DNS
+3. Reset Winsock
+4. NSLookup
+5. Tracert
+
+### Problemas de Impressão
+
+1. Parar Spooler
+2. Iniciar Spooler
+
+### Atualização de Aplicativos
+
+1. Winget Upgrade All
+
+---
+
+## 🎯 Benefícios
+
+- Centralização das ferramentas administrativas
+- Redução do tempo de atendimento
+- Padronização dos procedimentos técnicos
+- Fácil utilização
+- Automatização de tarefas recorrentes
+- Diagnóstico rápido de falhas
+- Utilização de ferramentas nativas do Windows
+- Baixo consumo de recursos
+
+---
+
+## 🔒 Segurança
+
+O script utiliza apenas ferramentas nativas do Windows.
+
+Nenhuma informação é transmitida para serviços externos.
+
+Todas as ações são executadas localmente na estação ou servidor.
+
+---
+
+## 🔮 Melhorias Futuras
+
+- Geração automática de logs
+- Exportação de diagnósticos em TXT
+- Inventário automático da estação
+- Backup antes de reparos críticos
+- Integração com PowerShell
+- Interface gráfica
+- Coleta automática de informações do equipamento
+- Relatórios em PDF
+
+---
+
+## 📸 Capturas de Tela
+
+Adicione aqui imagens do menu principal.
+
+Exemplo:
+
+```markdown
+![Menu Principal](images/menu-principal.png)
+```
+
+---
+
+## 🤝 Contribuição
+
+Sugestões, melhorias e correções são sempre bem-vindas.
+
+Caso encontre algum problema ou tenha ideias para novas funcionalidades, abra uma Issue ou envie uma Pull Request.
+
+---
+
+## 📄 Licença
+
+Este projeto foi desenvolvido para auxiliar atividades de suporte técnico e administração de ambientes Windows.
+
+Uso livre para fins educacionais e corporativos.
+
+---
+
+## 👨‍💻 Autor
+
+### Richard Tech
+
+Especialista em Automação de Processos, Infraestrutura, Suporte Técnico e Administração de Sistemas Windows.
+
+#### Contato
+
+GitHub: https://github.com/SEU-USUARIO
+
+LinkedIn: https://linkedin.com/in/SEU-PERFIL
+
+---
+
+⭐ Se este projeto foi útil para você, considere deixar uma estrela no repositório.
+
+**Richard Tech - Automação de Processos e Soluções para Infraestrutura de TI** 🚀
